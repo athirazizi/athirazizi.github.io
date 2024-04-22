@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
 
-    <style>
-      /* Carousel styling */
-      #introCarousel,
-      .carousel-inner,
-      .carousel-item,
-      .carousel-item.active {
-        height: 100vh;
-      }
+  <style>
+    /* Carousel styling */
+    #introCarousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100vh;
+    }
 
-      .carousel-item:nth-child(1) {
-        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-      }
+    .carousel-item:nth-child(1) {
+      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
 
-      .carousel-item:nth-child(2) {
-        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-      }
+    .carousel-item:nth-child(2) {
+      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
 
-      .carousel-item:nth-child(3) {
-        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-      }
+    .carousel-item:nth-child(3) {
+      background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
 
-      /* Height for devices larger than 576px */
-      @media (min-width: 992px) {
-        #introCarousel {
-          margin-top: -58.59px;
-        }
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #introCarousel {
+        margin-top: -58.59px;
       }
+    }
 
-      .navbar .nav-link {
-        color: #fff !important;
-      }
-    </style>
+    .navbar .nav-link {
+      color: #fff !important;
+    }
+
+    .timeline {
+      border-left: 1px solid hsl(0, 0%, 90%);
+      position: relative;
+      list-style: none;
+    }
+
+    .timeline .timeline-item {
+      position: relative;
+    }
+
+    .timeline .timeline-item:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    .timeline .timeline-item:after {
+      background-color: hsl(0, 0%, 90%);
+      left: -38px;
+      border-radius: 50%;
+      height: 11px;
+      width: 11px;
+      content: "";
+    }
+  </style>
 </head>
+
 <body>
-      <!--Main Navigation-->
+  <!--Main Navigation-->
   <header>
 
     <!-- Navbar -->
@@ -75,8 +102,13 @@
               <a class="nav-link" aria-current="page" href="#intro">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#aboutme" rel="nofollow"
-                target="_self">About me</a>
+              <a class="nav-link" href="#skills" rel="nofollow" target="_self">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience" rel="nofollow" target="_self">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" rel="nofollow" target="_self">Projects</a>
             </li>
           </ul>
 
@@ -115,7 +147,7 @@
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center" data-mdb-theme="dark">
                 <h1 class="mb-3">Hello, I am Athir</h1>
-                <h5 class="mb-4">A software developer with some goals in mind</h5>
+                <h5 class="mb-4">A goal oriented software developer</h5>
 
               </div>
             </div>
@@ -127,7 +159,9 @@
           <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
-                <h2>You can place here any content</h2>
+                <h1>Want to work on something?</h1>
+                <a class="btn btn-outline-light btn-lg m-2" data-mdb-ripple-init href="mailto:aziziathir@gmail.com"
+                  target="_blank" role="button">Contact me</a>
               </div>
             </div>
           </div>
@@ -173,8 +207,37 @@
   <main class="mt-5">
     <div class="container">
       <!--Section: Content-->
-      <section>
+      <section id="aboutme">
+        <a name="aboutme"></a>
         <div class="row">
+
+
+
+          <div class="col-md-6 gx-5 mb-4">
+
+            <h4><strong>About me</strong></h4>
+            <p class="text-muted">
+              I've recently completed an undergraduate computer science degree at The University of Buckingham, where I
+              was awarded a first.
+            </p>
+            <p class="text-muted">
+              Driven by my passion for computer science, I am constantly exploring new technologies and staying
+              up-to-date with
+              the latest industry trends.
+
+            </p>
+
+            <p class="text-muted">
+              With a strong
+              work ethic and attention to detail, I strive to deliver quality software projects which empower
+              collaborative efforts.
+            </p>
+
+            <p class="text-muted">
+              What I really enjoy is tackling complex problems and finding elegant solutions.
+            </p>
+          </div>
+
           <div class="col-md-6 gx-5 mb-4">
             <div class="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init data-mdb-ripple-color="light">
               <img src="https://mdbootstrap.com/img/new/slides/031.jpg" class="img-fluid" />
@@ -184,23 +247,125 @@
             </div>
           </div>
 
-          
-          <div class="col-md-6 gx-5 mb-4">
-            <h4><strong>About me</strong></h4>
-            <p class="text-muted">
-              I've recently completed an undergraduate computer science degree at The University of Buckingham. Driven by my passion for computer science, I am constantly exploring new technologies and staying up-to-date with the latest industry trends. I enjoy tackling complex problems and finding elegant solutions. With a strong work ethic and attention to detail, I strive to deliver quality software projects which empower collaborative efforts. 
-            </p>
-          </div>
-
         </div>
       </section>
       <!--Section: Content-->
 
       <hr class="my-5" />
 
+      <section id="skills">
+        <a name="skills"></a>
+        <h4 class="mb-5"><strong>Skills</strong></h4>
+        <div class="accordion w-100" id="basicAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button data-mdb-collapse-init class="accordion-button collapsed" type="button"
+                data-mdb-target="#basicAccordionCollapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Question #1
+              </button>
+            </h2>
+            <div id="basicAccordionCollapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+              data-mdb-parent="#basicAccordion" style="">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and
+                hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                our default variables. It's also worth noting that just about any HTML can go within
+                the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button data-mdb-collapse-init class="accordion-button collapsed" type="button"
+                data-mdb-target="#basicAccordionCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Question #2
+              </button>
+            </h2>
+            <div id="basicAccordionCollapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-mdb-parent="#basicAccordion" style="">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and
+                hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                our default variables. It's also worth noting that just about any HTML can go within
+                the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button data-mdb-collapse-init class="accordion-button collapsed" type="button"
+                data-mdb-target="#basicAccordionCollapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Question #3
+              </button>
+            </h2>
+            <div id="basicAccordionCollapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-mdb-parent="#basicAccordion" style="">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                until the collapse plugin adds the appropriate classes that we use to style each
+                element. These classes control the overall appearance, as well as the showing and
+                hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                our default variables. It's also worth noting that just about any HTML can go within
+                the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5" />
+
+      <section id="experience">
+        <a name="experience"></a>
+        <h4 class="mb-5"><strong>Experience</strong></h4>
+        <ul class="timeline">
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">Volunteer Mentor | Royal Latin School</h5>
+              <p class="text-muted mb-2 fw-bold">November 2023</p>
+              <p class="text-muted">
+                <ul>
+                  <li>Mentored A-Level students in computer science projects, offering personalised guidance and technical expertise.</li>
+                  <li>Facilitated brainstorming sessions to enhance understanding of key concepts, contributing to the successful completion of various projects.</li>
+                  <li>Played a pivotal role in fostering academic growth and aiding students in achieving their academic goals through effective communication and mentorship.</li>
+                </ul>
+              </p>
+          </li>
+
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">Student Intern | Bright Network</h5>
+            <p class="text-muted mb-2 fw-bold">July 2023</p>
+            <p class="text-muted">
+              <ul>
+                <li>Conducted comprehensive research and designed innovative solutions to guide Small and Medium Enterprises (SMEs) in achieving Net Zero, as part of Lloyd Banks’ 2023 hackathon: "Journey to Net Zero."</li>
+                <li>Collaborated with cross-functional teams to develop strategic plans and implement UI/UX design principles, ensuring a seamless and user-friendly experience for participants and stakeholders.</li>
+                <li>Demonstrated a multifaceted approach by integrating research, design, and collaborative efforts to contribute to the success of the hackathon and promote sustainable practices among SMEs.</li>
+              </ul>
+            </p>
+          </li>
+
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold">Student Representative for Foundation in Engineering | University of Nottingham Malaysia</h5>
+            <p class="text-muted mb-2 fw-bold">September 2018 - June 2019</p>
+            <p class="text-muted">
+              <ul>
+                <li>Facilitated the collection of student feedback on the teaching methods employed in various modules within the program.</li>
+                <li>Analysed and identified areas for improvement based on student feedback, addressing concerns and challenges raised during the evaluation process.</li>
+                <li>Proposed effective and constructive solutions to enhance the overall teaching and learning experience, fostering a continuous improvement cycle for the program.</li>
+              </ul>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="my-5" />
       <!--Section: Content-->
-      <section class="text-center">
-        <h4 class="mb-5"><strong>Facilis consequatur eligendi</strong></h4>
+      <section id="projects">
+        <a name="projects"></a>
+        <h4 class="mb-5"><strong>Projects</strong></h4>
 
         <div class="row">
           <div class="col-lg-4 col-md-12 mb-4">
@@ -276,12 +441,12 @@
     <div class="text-center py-4 align-items-center">
       <p>Follow me on social media</p>
 
-      <a href="https://www.linkedin.com/in/athirazizi/" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
-        target="_blank">
+      <a href="https://www.linkedin.com/in/athirazizi/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        data-mdb-ripple-init target="_blank">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com/athirazizi/" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
-        target="_blank">
+      <a href="https://github.com/athirazizi/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        data-mdb-ripple-init target="_blank">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -294,7 +459,8 @@
     <!-- Copyright -->
   </footer>
   <!--Footer-->
-    <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.umd.min.js"></script>
 </body>
+
 </html>
